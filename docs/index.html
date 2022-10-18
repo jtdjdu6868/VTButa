@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>豚滾套娃機</title>
+        <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+        <script language="javascript" src="VTButa.js"></script>
+        <link rel="stylesheet" href="VTButa.css" />
+    </head>
+    <body>
+        <div id="preview_area">
+            <span id="loading">字體載入中...</span>
+            <canvas id="preview"></canvas>
+            <span id="font_loader">load font</span>
+        </div>
+        <div id="config">
+            <label class="mdc-text-field mdc-text-field--filled" data-mdc-auto-init="MDCTextField">
+                <span class="mdc-text-field__ripple"></span>
+                <span class="mdc-floating-label">窩是</span>
+                <input class="mdc-text-field__input" type="text" id="im" value="VT" />
+                <span class="mdc-line-ripple"></span>
+            </label>
+            <label for="chuu">
+                <div class="mdc-radio mdc-radio--touch">
+                    <input class="mdc-radio__native-control" type="radio" id="chuu" name="pos" checked />
+                    <div class="mdc-radio__background">
+                        <div class="mdc-radio__outer-circle"></div>
+                        <div class="mdc-radio__inner-circle"></div>
+                    </div>
+                    <div class="mdc-radio__ripple"></div>
+                </div>
+                廚
+            </label>
+            <label for="kuro">
+                <div class="mdc-radio mdc-radio--touch">
+                    <input class="mdc-radio__native-control" type="radio" id="kuro" name="pos" />
+                    <div class="mdc-radio__background">
+                        <div class="mdc-radio__outer-circle"></div>
+                        <div class="mdc-radio__inner-circle"></div>
+                    </div>
+                    <div class="mdc-radio__ripple"></div>
+                </div>
+                黑
+            </label><br />
+            <label class="mdc-text-field mdc-text-field--filled" data-mdc-auto-init="MDCTextField">
+                <span class="mdc-text-field__ripple"></span>
+                <span class="mdc-floating-label">要對方</span>
+                <input class="mdc-text-field__input" type="text" id="want_do" value="滾" />
+                <span class="mdc-line-ripple"></span>
+            </label><br />
+            <label class="mdc-text-field mdc-text-field--outlined" data-mdc-auto-init="MDCTextField">
+                <span class="mdc-notched-outline">
+                    <span class="mdc-notched-outline__leading"></span>
+                    <span class="mdc-notched-outline__notch">
+                        <span class="mdc-floating-label">套幾層</span>
+                    </span>
+                    <span class="mdc-notched-outline__trailing"></span>
+                </span>
+                <input type="number" min="1" class="mdc-text-field__input" id="count" value="1">
+            </label>
+            <button class="mdc-button mdc-button--touch" id="run" data-mdc-auto-init="MDCRipple">
+                <span class="mdc-button__ripple"></span>
+                <span class="mdc-button__label">產生</span>
+                <span class="mdc-button__touch"></span>
+            </button>
+            <button class="mdc-button mdc-button--touch" id="save" data-mdc-auto-init="MDCRipple">
+                <span class="mdc-button__ripple"></span>
+                <span class="mdc-button__label">儲存</span>
+                <span class="mdc-button__touch"></span>
+            </button>
+        </div>
+    </body>
+</html>
